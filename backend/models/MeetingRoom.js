@@ -6,4 +6,4 @@ const meetingRoomSchema = new Schema({
     location: String,
 });
 
-module.exports = mongoose.model("MeetingRoom", meetingRoomSchema);
+module.exports = mongoose.model("MeetingRoomModel", meetingRoomSchema, "MeetingRoom");

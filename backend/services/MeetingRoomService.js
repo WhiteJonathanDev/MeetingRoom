@@ -1,5 +1,10 @@
 const MeetingRoomModel = require("../models/MeetingRoom");
 
 exports.getAllMeetingRooms = async () => {
-    return await MeetingRoomModel.find();
+    return MeetingRoomModel.find()
+};
+
+exports.createMeetingRoom = async (data) => {
+    const newMeetingRoom = new MeetingRoomModel(data)
+    return await newMeetingRoom.save();
 };

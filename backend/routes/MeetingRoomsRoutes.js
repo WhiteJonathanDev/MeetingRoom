@@ -1,8 +1,9 @@
 const express = require("express");
-const { getAllMeetingRooms } = require("../controllers/MeetingRoomController");
+const { getAllMeetingRooms, createMeetingRoom } = require("../controllers/MeetingRoomController");
 
 const router = express.Router();
 
-router.route("/test").get(getAllMeetingRooms)
+router.route("/").get(getAllMeetingRooms)
+router.route("/create").post(createMeetingRoom)
 
 module.exports = router;
